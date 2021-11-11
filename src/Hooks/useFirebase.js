@@ -22,11 +22,10 @@ const useFirebase = () => {
             .then((userCredential) => {
 
                 setAuthError("");
-                const newUser = { email, displayName: name };
+                const newUser = { email, displayName: name, photoURL: img };
                 setUser(newUser);
-                // SAVE USER TO DATABASE
+                saveUser(email, name, img)
 
-                // saveUser(email, name)
 
                 //SEND NAME & IMG TO FIREBASE AFTER CREATION
                 updateProfile(auth.currentUser, {
@@ -39,12 +38,13 @@ const useFirebase = () => {
                 });
 
                 history.replace('/');
-                window.location.reload();
+
             })
             .catch((error) => {
                 setAuthError(error.message);
             })
             .finally(() => setIsLoading(false))
+
     }
 
 
@@ -69,7 +69,7 @@ const useFirebase = () => {
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 const user = result.user;
-                // saveGoogleUser(user.email, user.displayName);
+                saveGoogleUser(user.email, user.displayName);
                 const destination = location?.state?.from || '/'
                 history.replace(destination)
                 setAuthError('')
@@ -114,28 +114,30 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false))
     }
 
-    // const saveUser = (email, displayName) => {
-    //     const user = { email, displayName };
-    //     fetch('https://mighty-forest-99071.herokuapp.com/users', {
-    //         method: 'POST',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(user)
-    //     })
-    //         .then()
-    // }
-    // const saveGoogleUser = (email, displayName) => {
-    //     const user = { email, displayName };
-    //     fetch('https://mighty-forest-99071.herokuapp.com/users', {
-    //         method: 'PUT',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(user)
-    //     })
-    //         .then()
-    // }
+    const saveUser = (email, displayName, photoURL) => {
+        const user = { email, displayName, photoURL };
+        console.log(user)
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
+    }
+    const saveGoogleUser = (email, displayName) => {
+        const user = { email, displayName };
+
+        fetch('http://localhost:5000/users', {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
+    }
     return {
         user,
         admin,

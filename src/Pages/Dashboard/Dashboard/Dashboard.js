@@ -13,6 +13,9 @@ import Pay from '../Pay/Pay';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import './Dashboard.css'
 import MyOrders from '../MyOrders/MyOrders';
+import AddAProduct from '../AddAProduct/AddAProduct';
+import ManageProducts from '../ManageProducts/ManageProducts';
+import AddReview from './../AddReview/AddReview';
 
 
 const Dashboard = () => {
@@ -38,11 +41,11 @@ const Dashboard = () => {
                             <Link to={`${url}`}><Button variant="outline-dark">Dashboard</Button></Link><br />
                             <Link to={`${url}/pay`}><Button variant="outline-dark">Pay</Button></Link><br />
                             <Link to={`${url}/myOrders`} ><Button variant="outline-dark">My Orders</Button></Link><br />
-                            <Link><Button variant="outline-dark">Review</Button></Link><br />
+                            <Link to={`${path}/reviews`}><Button variant="outline-dark">Review</Button></Link><br />
                             <Link to={`${url}/allOrders`}><Button variant="outline-dark">Manage All Orders</Button></Link><br />
-                            <Link><Button variant="outline-dark">Add A Product </Button></Link><br />
+                            <Link to={`${path}/addProducts`}><Button variant="outline-dark">Add A Product </Button></Link><br />
                             <Link><Button variant="outline-dark">Make Admin</Button></Link><br />
-                            <Link><Button variant="outline-dark">Manage Products</Button></Link><br />
+                            <Link to={`${path}/manageProducts`}><Button variant="outline-dark">Manage Products</Button></Link><br />
                             <Button onClick={logOut} variant="outline-dark">Logout</Button>
                         </Offcanvas.Body>
                     </Offcanvas>
@@ -61,8 +64,17 @@ const Dashboard = () => {
                         <Route path={`${path}/myOrders`}>
                             <MyOrders></MyOrders>
                         </Route>
+                        <Route path={`${path}/reviews`}>
+                            <AddReview></AddReview>
+                        </Route>
                         <Route path={`${path}/allOrders`}>
                             <ManageAllOrders></ManageAllOrders>
+                        </Route>
+                        <Route path={`${path}/addProducts`}>
+                            <AddAProduct></AddAProduct>
+                        </Route>
+                        <Route path={`${path}/manageProducts`}>
+                            <ManageProducts></ManageProducts>
                         </Route>
 
                     </Switch>

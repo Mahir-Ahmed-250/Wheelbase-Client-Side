@@ -1,0 +1,6 @@
+.product-img{
+    height: 320px;
+}
+.product-card:hover{
+    transform: scale(1.01);
+}
