@@ -1,0 +1,51 @@
+[
+    {
+        "id": 100,
+        "name": "Cannondale Jekyll 1 2022",
+        "price": 5400,
+        "img": "https://ep1.pinkbike.org/p4pb20800832/p4pb20800832.jpg",
+        "description": "The Cannondale Jekyll has more experience than most bikes on the trails these days. In the early days of the Enduro World Series, the bike from the US brand was one of the most successful bikes of its time, if not the most successful."
+    },
+    {
+        "id": 101,
+        "name": "Cube Stereo 120 Race 2022",
+        "price": 2120,
+        "img": "https://www.cube.eu/typo3temp/_processed_/6/d/csm_553201_porn_3ab3881036.jpg",
+        "description": "Like all our frames, the Stereo 120 is all about providing the best performance at the lowest possible weight. The tapered head tube and Boost 148 rear axle ensure steering precision and excellent pedalling efficiency."
+    },
+    {
+        "id": 102,
+        "name": "Cube Cross Race C:62 Pro 2022",
+        "price": 3000,
+        "img": "https://www.cube.eu/media_ftp/BIKE_Bilder_2022/588300/588300_porn.jpg",
+        "description": "A great cyclocross frame needs to be light, nimble and easy to carry. For the Cross Race C:62, our premium C:62 carbon allowed a light build, but we saved even more weight by routing cables internally via the head tube. Handily, this also eliminates cable rub."
+    },
+    {
+        "id": 103,
+        "name": "Merida eOne-Sixty 10k 2021",
+        "price": 1500,
+        "img": "https://s14761.pcdn.co/wp-content/uploads/sites/2/2020/08/Meride-eONE-SIXTY-10K-2021-Test-Review-003.jpg",
+        "description": "The comprehensive package of the new eONE-SIXTY 10K does include not only a spare battery but also the perfect e-bike specific backpack from EVOC."
+    },
+    {
+        "id": 104,
+        "name": "Trek Slash 8 2021",
+        "price": 1500,
+        "img": "https://p.vitalmtb.com/photos/users/52115/photos/141143/original_6FB5537E_94E0_43DB_A72D_03D846E7ED4E.jpeg",
+        "description": "Slash 8 is an enduro mountain bike that rolls on fast 29er wheels and floats on plush RockShox suspension with SRAM's newest GX Eagle handling drivetrain duties."
+    },
+    {
+        "id": 105,
+        "name": "Genesis CDA 20 2021",
+        "price": 1800,
+        "img": "https://www.genesisbikes.co.uk/media/catalog/product/f/t/ftp_f_freewheel_imagessportlinefwbikesgn21210_lifestyle_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
+        "description": "It may be the Croix de Fer's little brother - but our CDA is still one mighty bike! Sharing the same geometry and legendary handling as it's steel counterpart, the CDA swaps out steel for aluminium and in turn passes a nice cost saving on to you."
+    },
+    {
+        "id": 105,
+        "name": "Genesis CDA 20 2021",
+        "price": 1800,
+        "img": "https://www.wheelbase.co.uk/wp-content/uploads/import/genesis/2021/CDA20-2.jpg",
+        "description": "Nice Bike"
+    }
+]

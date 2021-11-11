@@ -1,0 +1,41 @@
+ .nav-background{
+     background-color:rgba(17, 16, 14, 0.938);
+     overflow-x: hidden;
+ }
+ .nav-links{
+     text-decoration: none;
+     margin-left: 10px;
+     font-size: 20px;
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     color: white;
+     display: block;
+     padding:5px;
+ }
+ .nav-links:hover{
+     color: white;
+ }
+ .company-name{
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     font-size: 35px; 
+     text-decoration: none;
+     color:white;
+     font-weight: bolder;
+ }
+ .company-name:hover{
+     color: white;
+ }
+ .login-btn{
+     margin-left: 20px;
+ }
+ .nav-img{
+     border-radius: 50%;
+     border:1px solid white;
+     width: 55px;
+     height: 55px;
+     margin-left: 20px;
+     margin-right: 10px;
+ }
+ .nav-name{
+     font-size: 20px;
+     margin-right: 20px;
+ }

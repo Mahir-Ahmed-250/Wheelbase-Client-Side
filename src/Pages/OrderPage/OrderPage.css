@@ -1,0 +1,13 @@
+.order-service form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    }
+.order-service form input, textarea{
+    width: 75%;
+    margin-bottom: 10px;
+    }
+.order-img{
+    height: 400px;
+}

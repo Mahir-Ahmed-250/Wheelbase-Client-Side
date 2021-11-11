@@ -1,0 +1,107 @@
+.footer{
+    background-color:rgba(17, 16, 14, 0.938);
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 30px;
+    margin-top: 50px;
+   }
+.footer-1,
+.footer-2,
+.footer-3,
+.footer-4,
+.footer-5{
+    display: inline-block;
+    vertical-align: top;
+   }
+.footer .footer-1{
+    width: 20%;  
+}  
+.footer .footer-2{
+    width: 18%;
+}
+.payment{
+    width: 350px;
+    height: 250px;
+    margin-top: -50px;
+}
+.footer .footer-3{
+    width: 15%;
+    margin-left: 150px;
+    margin-top: 20px;
+margin-right: 20px;
+}
+
+.footer-icons1{
+    display: inline;
+    font-size: 40px;
+    color: 	#4267B2;
+}
+.footer-icons2{
+    display: inline;
+    font-size: 40px;
+    color: red;
+    padding-left: 10px;
+}
+.footer-icons3{
+    display: inline;
+    font-size: 40px;
+    color: #00acee;
+    padding-left: 10px;
+}
+.footer-icons4{
+    display: inline;
+    font-size: 40px;
+    color: #8a3ab9;
+    padding-left: 10px;
+}
+ 
+.footer .footer-4{
+    width: 15%;
+    margin-top: 20px;
+}
+
+.mail{
+    text-decoration: none;
+    color: white;
+}
+
+.footer .footer-5{
+    width: 15%;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+@media (max-width: 1280px) { 
+    .footer .footer-1,
+    .footer .footer-2,
+    .footer .footer-3,
+    .footer .footer-4,
+    .footer .footer-5{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 0;
+    }
+    .footer .footer-3{
+        margin-left: 0px;
+    }
+    .footer-icons1{
+       font-size: 40px;
+    }
+    .footer-icons2{
+       font-size: 40px;
+    }
+    .footer-icons3{
+       font-size: 40px;
+    }
+    .footer-icons4{
+       font-size: 40px;
+    }
+    .payment{
+        width: 220px;
+    }
+
+};
