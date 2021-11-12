@@ -9,7 +9,7 @@ const useFirebase = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [authError, setAuthError] = useState('');
     const [admin, setAdmin] = useState(false);
-
+    console.log(user)
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
@@ -22,9 +22,6 @@ const useFirebase = () => {
 
                 setAuthError("");
                 const newUser = { email, displayName: name, photoURL: img };
-                setUser(newUser);
-                saveUser(email, name, img)
-
 
                 //SEND NAME & IMG TO FIREBASE AFTER CREATION
                 updateProfile(auth.currentUser, {
@@ -35,7 +32,8 @@ const useFirebase = () => {
                 }).catch((error) => {
 
                 });
-
+                setUser(newUser);
+                saveUser(email, name, img)
                 history.replace('/');
 
             })
