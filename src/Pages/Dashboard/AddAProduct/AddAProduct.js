@@ -5,7 +5,7 @@ import './AddAProduct.css'
 const AddAProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/products', data)
+        axios.post('https://ancient-oasis-14511.herokuapp.com/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert(' Updated Successfully')
@@ -15,7 +15,7 @@ const AddAProduct = () => {
     };
     return (
         <div className="add-product mt-5">
-            <h2 className="text-center">Add a Product</h2>
+            <h2 style={{ fontSize: '40px', fontFamily: " Georgia", fontWeight: "800" }} className="text-center ">Add a Product</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name", { required: true, maxLength: 30 })} placeholder="Name" />
                 <textarea className="text-area"  {...register("description", { required: true })} placeholder="Description" />

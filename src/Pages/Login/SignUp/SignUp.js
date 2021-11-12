@@ -11,7 +11,7 @@ const SignUp = () => {
     const [registerData, setRegisterData] = useState({});
     const location = useLocation();
     const history = useHistory();
-    const { user, registerUser, authError, signInWithGoogle } = useAuth();
+    const { registerUser, authError, signInWithGoogle } = useAuth();
 
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -69,7 +69,7 @@ const SignUp = () => {
                                 type="text"
                                 name="img"
                                 onBlur={handleOnBlur}
-                                placeholder="Image Url"
+                                placeholder="Image Url" required
                             /></Form.Group>
                         <p className='text-danger'>{authError}</p>
                         <Button variant="success" type="submit">

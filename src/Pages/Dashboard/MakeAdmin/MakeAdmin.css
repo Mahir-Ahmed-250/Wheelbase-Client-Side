@@ -1,0 +1,9 @@
+.admin-input{
+    width: 25%;
+    padding: 10px;
+}
+@media (max-width: 1280px) { 
+    .admin-input{
+        width: 100%;
+    }
+}

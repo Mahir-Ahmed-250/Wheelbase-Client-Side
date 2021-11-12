@@ -5,13 +5,14 @@ import './HomeProduct.css'
 const HomeProduct = ({ product }) => {
     const { _id, name, img, description, price } = product;
     return (
-        <div className="col-md-6 col-lg-4 mt-3">
+        <div className="col-md-6 col-lg-4 mt-4">
             <Card className='card home-card' >
                 <Card.Body>
-                    <Card.Img variant="top" className='service-img' src={img} />
-                    <h5 className='service-name'>{name}</h5>
-                    <p className='service-price'>Price: ${price}</p>
-                    <p className="description">{description}</p>
+                    <Card.Img variant="top" className='product-img' src={img} />
+                    <h5 className='product-name mt-3'>{name}</h5>
+
+                    <p className="product-description">{description}</p>
+                    <p className='product-price'>Price: ${price}</p>
                     <Link to={`/products/${_id}`}><button className='btn btn-dark'>Buy Now!</button></Link>
                 </Card.Body>
             </Card>

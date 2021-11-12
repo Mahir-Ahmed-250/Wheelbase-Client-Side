@@ -3,3 +3,30 @@
     width: 100px;
     border-radius: 50%;
 }
+.review-card{
+    height: 350px;
+}
+.customer-name{
+    font-size: 25px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:cornflowerblue;
+}
+@media (max-width: 1280px) { 
+    .review-card{height:300px}
+    .customer-img{
+        width: 80%;
+        height: 100px;
+    }
+    .customer-name{
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .rating{
+        font-size: 5px;
+    }
+    .customer-review{
+        font-size: 10px;
+        text-align: center;
+    }
+}

@@ -11,7 +11,7 @@ const OrderPage = () => {
     const { _id } = useParams();
     const { register, handleSubmit, reset } = useForm();
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${_id}`)
+        fetch(`https://ancient-oasis-14511.herokuapp.com/products/${_id}`)
             .then((res) => res.json())
             .then((data) => setProductDetails(data));
     }, [_id])
@@ -19,7 +19,7 @@ const OrderPage = () => {
 
     const onSubmit = data => {
         data.Status = "Pending"
-        fetch('http://localhost:5000/orders', {
+        fetch('https://ancient-oasis-14511.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,19 +44,19 @@ const OrderPage = () => {
                     <Card className='card'>
                         <Card.Img className="order-img" style={{ width: '100%' }} variant="top" src={productDetails.img} />
                         <Card.Body>
-                            <h5 className='service-name'> {productDetails.name}</h5>
-                            <h6 className='service-price'>Price: ${productDetails.price}</h6>
-                            <p className="description">{productDetails.description}</p>
+                            <h5 className='product-name'> {productDetails.name}</h5>
+                            <h6 className='product-price'>Price: ${productDetails.price}</h6>
+                            <p className="product-description">{productDetails.description}</p>
                         </Card.Body>
                     </Card>
                 </div>
-                <div className='col-lg-6 order-service'>
+                <div className='col-lg-6 order-product'>
 
                     <form className='' onSubmit={handleSubmit(onSubmit)}>
                         <h2>Order Details</h2>
                         <input defaultValue={user.displayName} {...register("Name")} />
                         <input defaultValue={user.email} {...register("Email", { required: true })} />
-                        {productDetails.name && <input readOnly defaultValue={productDetails.name} {...register("Service", { required: true })} />}
+                        {productDetails.name && <input readOnly defaultValue={productDetails.name} {...register("Product", { required: true })} />}
                         {productDetails.price && <input readOnly defaultValue={productDetails.price}{...register("Price", { required: true })} />}
                         <input placeholder='Address' {...register("Address", { required: true })} />
                         <input type="number" placeholder='Phone Number' {...register("Phone", { required: true })} />

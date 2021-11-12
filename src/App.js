@@ -10,7 +10,7 @@ import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import AuthProvider from './Context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import OrderPage from './Pages/OrderPage/OrderPage';
-import ManageAllOrders from './Pages/Dashboard/ManageAllOrders/ManageAllOrders';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -37,8 +37,11 @@ function App() {
             <Route exact path='/signup'>
               <SignUp></SignUp>
             </Route>
-            <Route path='/'>
+            <Route exact path='/'>
               <Home></Home>
+            </Route>
+            <Route path='*'>
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

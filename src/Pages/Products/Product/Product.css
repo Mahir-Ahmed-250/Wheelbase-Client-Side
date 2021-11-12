@@ -4,3 +4,19 @@
 .product-card:hover{
     transform: scale(1.01);
 }
+.product-name{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: blue;
+}
+.product-description{
+    font-size: 18px;
+    text-align: justify;
+    font-family:sans-serif;
+}
+.product-price{
+    font-size: 22px;
+    font-weight: bolder;
+    font-family: sans-serif;
+}

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Card } from 'react-bootstrap';
+import ManageSingleProduct from './ManageSingleProduct';
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://ancient-oasis-14511.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -12,7 +12,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to delete this Order?');
         if (confirmation) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://ancient-oasis-14511.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -27,27 +27,19 @@ const ManageProducts = () => {
         }
     }
     return (
-        <div className="border" >
-            <h2 className="title-text mt-5 p-4 text-center">Manage All Products</h2>
-            <h5 className="border-bottom  p-4 text-center">All Orders: {products.length}</h5>
-            {
-                products.map(product => <div key={product._id}>
-                    <div className=" m-3 border p-4">
+        <div className="border mt-5" >
+            <h2 style={{ fontSize: '40px', fontFamily: " Georgia", fontWeight: "800" }} className="  p-4 text-center">Manage All Products</h2>
+            <h5 style={{ fontSize: '25px', fontFamily: " Georgia", fontWeight: "800" }} className="border-bottom  p-4 text-center">Displayed Products: {products.length}</h5>
+            <div className="row">
+                {
+                    products.map(product =>
+                        <ManageSingleProduct handleDelete={handleDelete} key={product._id} product={product}></ManageSingleProduct>
 
 
-                        <Card className='card'>
-                            <Card.Img className="order-img" style={{ width: '100%' }} variant="top" src={product.img} />
-                            <Card.Body>
-                                <h5 className='service-name'> {product.name}</h5>
-                                <h6 className='service-price'>Price: ${product.price}</h6>
-                                <p className="description">{product.description}</p>
-                            </Card.Body>
-                        </Card>
 
-                        <button onClick={() => handleDelete(product._id)} className="btn btn-danger mb-2" >Delete</button>
-                    </div>
-                </div>)
-            }
+                    )
+                }
+            </div>
         </div>
     );
 };

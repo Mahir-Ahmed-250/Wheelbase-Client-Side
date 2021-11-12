@@ -1,24 +1,8 @@
-.service-img{
-    height: 300px;
-    border-radius: 75px 75px 75px 75px;  
-}
 .card{
     height: 100%;
     cursor: pointer;
 }
+
 .home-card:hover{
  transform: scale(1.01);
-}
-
-.service-name{
-    margin-top: 15px;
-    font-family: cursive;
-    font-weight: bolder;
-    color: blue;
-    font-size: 25px;
-}
-.service-price{
-    margin-top: 15px;
-    font-weight: bolder;
-    font-size: 20px;
 }

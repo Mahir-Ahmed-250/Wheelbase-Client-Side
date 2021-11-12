@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../Hooks/useAuth';
-
+import './MyOrder.css'
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const { user } = useAuth()
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://ancient-oasis-14511.herokuapp.com/orders')
             .then(res => res.json())
 
             .then((result) => {
@@ -19,7 +19,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to Remove this Order?');
         if (confirmation) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://ancient-oasis-14511.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -34,16 +34,16 @@ const MyOrders = () => {
         }
     }
     return (
-        <div>
+        <div className="border">
 
 
-            <h2 className=" pb-4">My Orders</h2>
-            <h5 className="border-bottom py-5">My Orders: {orders.length}</h5>
+            <h2 style={{ fontSize: '40px', fontFamily: " Georgia", fontWeight: "800" }} className="mt-5 p-4 text-center">My Orders</h2>
+            <h5 style={{ fontSize: '25px', fontFamily: " Georgia", fontWeight: "800" }} className="border-bottom  p-4 text-center">My Orders: {orders.length}</h5>
             {
                 orders.map(order => <div key={order._id}>
-                    <div className=" m-3 border-bottom">
+                    <div className=" m-3 border p-4">
                         <h5><span className="name-title">Customer Name:</span> {order.Name}</h5>
-                        <h5> <span className="name-title">Ordered Package: </span>{order.Service}</h5>
+                        <h5> <span className="name-title">Ordered Product: </span>{order.Product}</h5>
                         <h5><span className="name-title">Address:</span> {order.Address}</h5>
                         <h5><span className="name-title">Contact Number:</span> {order.Phone}</h5>
                         <h5><span className="name-title">Price:</span> ${order.Price}</h5>

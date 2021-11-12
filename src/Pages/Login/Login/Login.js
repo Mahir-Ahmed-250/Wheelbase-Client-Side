@@ -7,7 +7,7 @@ import useAuth from '../../../Hooks/useAuth';
 import img1 from './1.png'
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { user, loginUser, authError, signInWithGoogle } = useAuth();
+    const { loginUser, authError, signInWithGoogle } = useAuth();
 
     const location = useLocation();
     const history = useHistory();

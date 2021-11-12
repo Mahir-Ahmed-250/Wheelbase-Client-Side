@@ -10,7 +10,6 @@ const useFirebase = () => {
     const [authError, setAuthError] = useState('');
     const [admin, setAdmin] = useState(false);
 
-    console.log(user)
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
@@ -98,11 +97,11 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [auth])
 
-    // useEffect(() => {
-    //     fetch(`https://mighty-forest-99071.herokuapp.com/users/${user.email}`)
-    //         .then(res => res.json())
-    //         .then(data => setAdmin(data.admin))
-    // }, [user.email])
+    useEffect(() => {
+        fetch(`https://ancient-oasis-14511.herokuapp.com/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
 
     const logOut = () => {
         setIsLoading(false)
@@ -117,7 +116,7 @@ const useFirebase = () => {
     const saveUser = (email, displayName, photoURL) => {
         const user = { email, displayName, photoURL };
         console.log(user)
-        fetch('http://localhost:5000/users', {
+        fetch('https://ancient-oasis-14511.herokuapp.com/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -129,7 +128,7 @@ const useFirebase = () => {
     const saveGoogleUser = (email, displayName) => {
         const user = { email, displayName };
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://ancient-oasis-14511.herokuapp.com/users', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

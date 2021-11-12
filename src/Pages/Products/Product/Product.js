@@ -9,9 +9,9 @@ const Product = ({ product }) => {
             <Card className="product-card">
                 <Card.Img className="product-img" variant="top" src={img} />
                 <Card.Body>
-                    <h5 className='course-name'> {name}</h5>
-                    <h6 className='course-description'> {description}</h6>
-                    <p className="course-price">Price: ${price}</p>
+                    <h5 className='product-name'> {name}</h5>
+                    <h6 className='product-description'> {description}</h6>
+                    <p className="product-price">Price: ${price}</p>
                     <Link to={`/products/${_id}`}><Button className='btn btn-dark'>Buy Now!</Button></Link>
                 </Card.Body>
             </Card>
