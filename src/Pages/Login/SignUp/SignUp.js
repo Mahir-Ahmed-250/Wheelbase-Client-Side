@@ -69,7 +69,7 @@ const SignUp = () => {
                                 type="text"
                                 name="img"
                                 onBlur={handleOnBlur}
-                                placeholder="Image Url" required
+                                placeholder="Image Url"
                             /></Form.Group>
                         <p className='text-danger'>{authError}</p>
                         <Button variant="success" type="submit">
