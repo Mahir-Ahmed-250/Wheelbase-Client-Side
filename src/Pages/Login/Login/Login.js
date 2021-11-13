@@ -31,7 +31,7 @@ const Login = () => {
     return (
         <div className="container">
             <div className='row'>
-                <h2 className='text-center mt-2 sign-up'>Login</h2>
+                <h2 style={{ fontSize: '40px', fontFamily: " Georgia", fontWeight: "800" }} className='text-center mt-5 sign-up'>Login</h2>
                 <div className='col-md-6 col-lg-8 '>
                     <Form className='form-reg animate__animated animate__fadeInLeft' onSubmit={handleLoginSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">

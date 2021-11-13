@@ -33,7 +33,7 @@ const SignUp = () => {
     return (
         <div className="container">
             <div className='row'>
-                <h2 className='text-center mt-2 sign-up'>Sign Up</h2>
+                <h2 style={{ fontSize: '40px', fontFamily: " Georgia", fontWeight: "800" }} className='text-center mt-5 sign-up'>Sign Up</h2>
                 <div className='col-md-6 col-lg-8 '>
                     <Form className='form-reg animate__animated animate__fadeInLeft' onSubmit={handleRegistration} >
                         <Form.Group className="mb-3">

@@ -21,7 +21,8 @@ const useFirebase = () => {
 
                 setAuthError("");
                 const newUser = { email, displayName: name, photoURL: img };
-
+                setUser(newUser);
+                saveUser(email, name, img)
                 //SEND NAME & IMG TO FIREBASE AFTER CREATION
                 updateProfile(auth.currentUser, {
                     displayName: name,
@@ -31,8 +32,7 @@ const useFirebase = () => {
                 }).catch((error) => {
 
                 });
-                setUser(newUser);
-                saveUser(email, name, img)
+
                 history.replace('/');
 
             })
