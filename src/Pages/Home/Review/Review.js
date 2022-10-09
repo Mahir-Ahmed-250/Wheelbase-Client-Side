@@ -12,7 +12,7 @@ const Review = () => {
 
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://ancient-oasis-14511.herokuapp.com/reviews')
+        fetch('https://wheelbase.onrender.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

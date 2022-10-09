@@ -94,7 +94,7 @@ const useFirebase = () => {
     }, [auth])
 
     useEffect(() => {
-        fetch(`https://ancient-oasis-14511.herokuapp.com/users/${user.email}`)
+        fetch(`https://wheelbase.onrender.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -112,7 +112,7 @@ const useFirebase = () => {
     const saveUser = (email, displayName, photoURL) => {
         const user = { email, displayName, photoURL };
         console.log(user)
-        fetch('https://ancient-oasis-14511.herokuapp.com/users', {
+        fetch('https://wheelbase.onrender.com/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -124,7 +124,7 @@ const useFirebase = () => {
     const saveGoogleUser = (email, displayName) => {
         const user = { email, displayName };
 
-        fetch('https://ancient-oasis-14511.herokuapp.com/users', {
+        fetch('https://wheelbase.onrender.com/users', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

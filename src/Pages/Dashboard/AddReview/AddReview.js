@@ -9,7 +9,7 @@ const AddReview = () => {
     const userPhoto = user.photoURL
     const onSubmit = data => {
         data.img = { userPhoto }
-        fetch('https://ancient-oasis-14511.herokuapp.com/reviews', {
+        fetch('https://wheelbase.onrender.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

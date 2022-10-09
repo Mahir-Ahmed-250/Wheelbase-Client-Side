@@ -4,7 +4,7 @@ const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
     const [update, setUpdate] = useState([]);
     useEffect(() => {
-        fetch('https://ancient-oasis-14511.herokuapp.com/orders')
+        fetch('https://wheelbase.onrender.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [update])
@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to delete this Order?');
         if (confirmation) {
-            const url = `https://ancient-oasis-14511.herokuapp.com/orders/${id}`;
+            const url = `https://wheelbase.onrender.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -28,7 +28,7 @@ const ManageAllOrders = () => {
     }
 
     const handleUpdate = (fullOrder) => {
-        fetch('https://ancient-oasis-14511.herokuapp.com/users/approve', {
+        fetch('https://wheelbase.onrender.com/users/approve', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

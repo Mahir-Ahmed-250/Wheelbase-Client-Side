@@ -11,7 +11,7 @@ const OrderPage = () => {
     const { _id } = useParams();
     const { register, handleSubmit, reset } = useForm();
     useEffect(() => {
-        fetch(`https://ancient-oasis-14511.herokuapp.com/products/${_id}`)
+        fetch(`https://wheelbase.onrender.com/products/${_id}`)
             .then((res) => res.json())
             .then((data) => setProductDetails(data));
     }, [_id])
@@ -19,7 +19,7 @@ const OrderPage = () => {
 
     const onSubmit = data => {
         data.Status = "Pending"
-        fetch('https://ancient-oasis-14511.herokuapp.com/orders', {
+        fetch('https://wheelbase.onrender.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

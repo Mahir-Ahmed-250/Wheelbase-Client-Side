@@ -4,7 +4,7 @@ import ManageSingleProduct from './ManageSingleProduct';
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://ancient-oasis-14511.herokuapp.com/products')
+        fetch('https://wheelbase.onrender.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -12,7 +12,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to delete this Order?');
         if (confirmation) {
-            const url = `https://ancient-oasis-14511.herokuapp.com/products/${id}`;
+            const url = `https://wheelbase.onrender.com/products/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

@@ -6,7 +6,7 @@ import './Product.css'
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://ancient-oasis-14511.herokuapp.com/products')
+        fetch('https://wheelbase.onrender.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

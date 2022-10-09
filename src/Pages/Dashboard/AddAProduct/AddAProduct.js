@@ -5,7 +5,7 @@ import './AddAProduct.css'
 const AddAProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('https://ancient-oasis-14511.herokuapp.com/products', data)
+        axios.post('https://wheelbase.onrender.com/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert(' Updated Successfully')

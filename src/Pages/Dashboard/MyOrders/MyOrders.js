@@ -6,7 +6,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const { user } = useAuth()
     useEffect(() => {
-        fetch('https://ancient-oasis-14511.herokuapp.com/orders')
+        fetch('https://wheelbase.onrender.com/orders')
             .then(res => res.json())
 
             .then((result) => {
@@ -19,7 +19,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to Remove this Order?');
         if (confirmation) {
-            const url = `https://ancient-oasis-14511.herokuapp.com/orders/${id}`;
+            const url = `https://wheelbase.onrender.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
