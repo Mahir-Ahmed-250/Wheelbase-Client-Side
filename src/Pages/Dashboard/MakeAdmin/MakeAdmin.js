@@ -16,7 +16,7 @@ const MakeAdmin = () => {
 
         const user = { email }
         console.log(user)
-        fetch('https://ancient-oasis-14511.herokuapp.com/users/admin', {
+        fetch('https://wheelbase.onrender.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
